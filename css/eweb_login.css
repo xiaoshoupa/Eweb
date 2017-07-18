@@ -1,0 +1,50 @@
+/*登录*/
+.login{
+	width:460px;
+	height:450px;
+	background-color:white;
+	position:absolute;
+	top:200px;
+	right:150px;
+	border-top:4px #e8868b solid;
+	box-shadow:0 0 30px #bbb;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items: center;
+}
+#getLogin_num{
+	margin-top:16px;
+	width:100px;
+	height:42px;
+	font-size:13px;
+	font-weight:bold;
+	color:#4c94db;
+	background:rgba(0,0,0,0);
+	/*border:2px #ec868c solid;*/
+	border:none;
+	outline:none;
+	cursor:pointer;
+}
+#login_num{
+	width: 120px;
+}
+#getLogin_num:hover{
+	color:#2f73b1;
+}
+#getLogin_num:active{
+	color:#000;
+}
+#login_nums{
+	margin-top:16px;
+	width:70px;
+	height:40px;
+	background-image:url("../images/timg.jpg");
+	background-size: 100% 100%;
+	text-align:center;
+	line-height:42px;
+	font-size:16px;
+	color:#aaa;
+	font-weight: bold;
+	letter-spacing:4px;
+}

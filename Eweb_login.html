@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>伟达金云桥</title>
+	<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
+	<script src="js/eweb_login.js"></script>
+	<script src="js/eweb.js"></script>
+	<script src="validation/jquery.validate.js"></script>
+	<script src="validation/additional-methods.js"></script>
+	<script src="validation/messages_zh.js"></script>
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/eweb_regist.css">
+	<link rel="stylesheet" href="css/eweb_login.css">
+	<link rel="stylesheet" href="icon/iconfont.css">
+	
+</head>
+<body>
+	<!-- logo -->
+	<header>
+		<div class="logo">
+			<img src="images/nav-logo.png">
+		</div>
+	</header>
+	<section>
+	<!-- 登录 -->
+		<form action="Eweb_main.html" id="login_form" method="post">
+			<div class="login">
+				 <div class="regist_title">
+					<span>用户登录</span>
+				</div>
+				<!-- 用户名 -->
+				<div class="regist_content">
+					<div>
+						<div class="regist_icon">
+							 <i class="icon iconfont icon-ren1"></i>
+							 <input type="text" placeholder="&nbsp;请输入手机号..." name="login_phone" id="login_phone">
+						</div>
+					</div>
+					<!-- 提示文字 -->
+					<div class="regist_text"></div>
+				</div>
+				<!-- 密码 -->
+				<div class="regist_content">
+					<div class="regist_content_psd">
+						<div class="regist_icon">
+							 <i class="icon iconfont icon-lock"></i>
+							 <input type="password" placeholder="&nbsp;请输入密码..." name="password1" id="password1">
+						</div>
+						<div class="eyes">
+							<i class="icon iconfont icon-biyan" id="pwd1"></i>
+						</div>
+					</div>
+					<!-- 提示文字 -->
+					<div class="regist_text"></div>
+				</div>
+				<!-- 验证码 -->
+				<div class="regist_content">
+					<div class="regist_content_tel">
+						<div class="regist_icon">
+							 <i class="icon iconfont icon-erweima"></i>
+							 <input type="text" placeholder="&nbsp;请输入验证码..." name="login_num" id="login_num">
+							 <!-- 验证码内容 -->
+						</div>
+						<div id="login_nums"></div>
+						<input type="button"value="看不清？换图片" id="getLogin_num">
+					</div>
+					<!-- 提示文字 -->
+					<div class="regist_text"></div>
+				</div>
+			<!-- 登录按钮 -->
+				<div class="regist_agree"><input type="submit" value="登录"></div>
+				<!-- 脚部文字 -->
+				<div class="regist_foot">
+					<a href="Eweb_regist.html">用户注册</a>
+					<a href="#">忘记密码？</a>
+				</div>
+			</div>
+		</form>
+	</section>
+	<!-- 留白 -->
+	<footer>
+		
+	</footer>
+</body>
+</html>

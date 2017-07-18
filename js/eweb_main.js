@@ -1,0 +1,85 @@
+//主页登录注册
+$(function(){
+	var userTemp=sessionStorage.getItem('current_user');
+	if(userTemp==null){
+		$(".main_state>ul>li:eq(0)").click(function(){
+			location.href="Eweb_login.html";
+		});
+		$(".main_state>ul>li:eq(1)").click(function(){
+			location.href="Eweb_regist.html";
+		});
+	}else{
+		$(".main_state>span").html("您好，"+userTemp);
+		$(".main_state>ul>li:eq(0)").html("个人中心");
+		$(".main_state>ul>li:eq(1)").html("退出登录");
+		$(".main_state>ul>li:eq(0)").click(function(){
+			location.href="#";
+		});
+		$(".main_state>ul>li:eq(1)").click(function(){
+			if (confirm("您确定要退出登录吗？")) {
+				$(".main_state>span").html("登录/注册");
+				$(".main_state>ul>li:eq(0)").html("登录");
+				$(".main_state>ul>li:eq(1)").html("注册");
+				sessionStorage.removeItem("current_user");
+				location.reload();
+			}
+		});
+	}
+	// $("body").css("cursor","url('../images/mouse.png')");
+});
+// 播放按钮
+$(function(){
+	$("body").css("cursor","auto");
+	$(".swiper-pagination").mouseover(function(){
+		$("body").css("cursor","auto");
+	});
+	$(".swiper-pagination").mouseout(function(){
+		$("body").css("cursor","none");
+	});
+	$("header").mouseover(function(){
+		$("body").css("cursor","auto");
+	});
+	$("header").mouseout(function(){
+		$("body").css("cursor","none");
+	});
+	var play=document.getElementsByTagName("video");
+	$("video,#main_play").click(function(){
+		if(!play.paused){
+			setTimeout(function(){$("#main_play").prop("src","images/play.png");$("#main_play").show();},100);
+			$("body").css("cursor","auto");
+			play[0].pause();
+			$(".swiper-pagination").mouseover(function(){
+				$("body").css("cursor","auto");
+			});
+			$(".swiper-pagination").mouseout(function(){
+				$("body").css("cursor","auto");
+			});
+			$("header").mouseover(function(){
+				$("body").css("cursor","auto");
+			});
+			$("header").mouseout(function(){
+				$("body").css("cursor","auto");
+			});	
+			play.paused=true;
+		}else{
+			setTimeout(function(){$("#main_play").prop("src","images/pasue.png");$("#main_play").show();},100);
+			setTimeout(function(){$("#main_play").hide();},1000);
+			setTimeout(function(){$("body").css("cursor","none");},1000);
+			play[0].play();
+			$(".swiper-pagination").mouseover(function(){
+				$("body").css("cursor","auto");
+			});
+			$(".swiper-pagination").mouseout(function(){
+				$("body").css("cursor","none");
+			});
+			$("header").mouseover(function(){
+				$("body").css("cursor","auto");
+			});
+			$("header").mouseout(function(){
+				$("body").css("cursor","none");
+			});
+			play.paused=false;
+		}
+	});
+	
+});
